@@ -21,6 +21,7 @@ public class Task01AnonymousClass {
                 return a.length() - b.length();
             }
         });
+        words.sort((a, b) -> a.length() - b.length());
         System.out.println(words);
 
         words.removeIf(new Predicate<String>() {
@@ -29,6 +30,7 @@ public class Task01AnonymousClass {
                 return s.length() > 5;
             }
         });
+        words.removeIf(s -> s.length() > 5);
         System.out.println(words);
     }
 }
