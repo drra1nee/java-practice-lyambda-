@@ -58,7 +58,7 @@ public class Task04Collectors {
         System.out.println("максимум мс по сервисам: " + maxByService);
 
         String errorServices = LOG.stream()
-                .filter(line -> line.level().equals("ERROR"))
+                .filter(line -> "ERROR".equals(line.level()))
                 .map(LogLine::service)
                 .distinct()
                 .sorted()
